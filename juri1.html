@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Kompetisi Essay Mesin 2020</title>
+  </head>
+  <body>
+    <div>
+      <div class="nav-container">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+              <img src="Files/logo.png" width="30px" height="30px">
+              Kompetisi Essay Mesin 2020
+            </a>
+        </nav>
+      </div>
+    </div>
+    <h4>JURI: I Dewa Gede Ary Subagia</h4>
+    <a class="btn btn-primary" href="home.html" role="button" style="padding-top: 5px; padding-bottom: 5px; text-align: center">Back to Sign In Page</a>
+    <div>
+      ID PESERTA: KEM-
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <!--Tombol Peserta 1-->
+          <button onclick="num1()" type="button" class="btn btn-secondary">
+            <a class="font-number">01</a>
+          </button>
+          <script>
+            function num1() {
+              document.getElementById("demo").innerHTML = '<embed src="Files/peserta01.pdf" type="application/pdf" width="100%" height="600px">';
+              document.getElementById("judul").innerHTML = '<h1>File Essay Gagasan KEM-01</h1>';
+            }
+          </script>
+          <!--Tombol Peserta 2-->
+          <button onclick="num2()" type="button" class="btn btn-secondary">
+            <a class="font-number">02</a>
+          </button>
+          <script>
+            function num2() {
+              document.getElementById("demo").innerHTML = '<embed src="Files/peserta02.pdf" type="application/pdf" width="100%" height="600px">';
+              document.getElementById("judul").innerHTML = '<h1>File Essay Gagasan KEM-02</h1>';
+            }
+          </script>
+          <!--Tombol Peserta 3-->
+          <button onclick="num3()" type="button" class="btn btn-secondary">
+            <a class="font-number">03</a>
+          </button>
+          <script>
+            function num3() {
+              document.getElementById("demo").innerHTML = '<embed src="Files/peserta03.pdf" type="application/pdf" width="100%" height="600px">';
+              document.getElementById("judul").innerHTML = '<h1>File Essay Gagasan KEM-03</h1>';
+            }
+          </script>
+        </div>
+    </div>
+    <div id="judul">
+      <h1>File Essay Gagasan KEM-01</h1>
+    </div>
+    <div>
+      <div class="container" id="demo">
+        <embed src="Files/Guideline Essay Gagasan.pdf" type="application/pdf" width="100%" height="600px">
+      </div>
+    </div>
+    <h1>Form Penilaian</h1>
+    <form class="contact-form">
+      <label id="id-peserta" for="">Id Peserta</label><br />
+      <input class="name" type="text" placeholder="Diisi dengan contoh: '01'"/><br />
+      <label for="">Format Penulisan</label><br />
+      <input class="nilai1" type="number" placeholder="1-10" min="1" max="10"/><br />
+      <label for="">Ide Gagasan</label><br />
+      <input class="nilai2" type="number" placeholder="1-10" min="1" max="10"/><br />
+      <label for="">Argumentasi & Pengembangan Gagasan</label><br />
+      <input class="nilai3" type="number" placeholder="1-10" min="1" max="10"/><br />
+      <label for="">Aspek Kebahasaan</label><br />
+      <input class="nilai4" type="number" placeholder="1-10" min="1" max="10"/><br />
+      <label for="">Comment</label><br />
+      <textarea
+        class="message"
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="*optional"
+      ></textarea
+      ><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
