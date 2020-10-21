@@ -28,32 +28,29 @@ let contactInfo = firebase.database().ref("juri1");
 // Listen for a submit
 document.querySelector(".contact-form").addEventListener("submit", submitForm);
 
-let idnya = document.querySelector(".chooseid");
-console.log(idnya);
-
 function submitForm(e) {
   e.preventDefault();
 
   //   Get input Values
-  let name = document.querySelector(".chooseid");
+  let name = document.querySelector(".name").value;
   let nilai1 = document.querySelector(".nilai1").value;
   let nilai2 = document.querySelector(".nilai2").value;
   let nilai3 = document.querySelector(".nilai3").value;
   let nilai4 = document.querySelector(".nilai4").value;
   let message = document.querySelector(".message").value;
-  console.log(nilai1, nilai2, nilai3, nilai4, message);
+  console.log(name, nilai1, nilai2, nilai3, nilai4, message);
 
-  saveContactInfo(idnya, nilai1, nilai2, nilai3, nilai4, message);
+  saveContactInfo(name, nilai1, nilai2, nilai3, nilai4, message);
 
   document.querySelector(".contact-form").reset();
 }
 
 // Save infos to Firebase
-function saveContactInfo(idnya, nilai1, nilai2, nilai3, nilai4, message) {
+function saveContactInfo(name, nilai1, nilai2, nilai3, nilai4, message) {
   let newContactInfo = contactInfo.push();
 
   newContactInfo.set({
-    name: idnya,
+    name: name,
     nilai1: nilai1,
     nilai2: nilai2,
     nilai3: nilai3,
