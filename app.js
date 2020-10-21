@@ -58,3 +58,11 @@ function saveContactInfo(name, nilai1, nilai2, nilai3, nilai4, message) {
     message: message,
   });
 }
+
+function setColor(e, btn, color) {
+  var target = e.target,
+      count = +target.dataset.count;
+  
+   target.style.backgroundColor = count === 1 ?  "#349F02" : "#B6CAAE";
+   target.dataset.count = count === 1 ? 0 : 1;
+}
